@@ -1,0 +1,21 @@
+-- Count the dinos
+    dinosaurs=# SELECT COUNT(id) FROM dinos;
+     count
+    -------
+       331
+    (1 row)
+
+-- Jurassic Park
+    dinosaurs=# SELECT * FROM dinos WHERE period = 'Jurassic';
+
+-- Sum length of the dinos in the Cretaceous period
+    dinosaurs=# SELECT SUM(length) FROM dinos WHERE period='Cretaceous';
+     sum
+    ---------
+    1366.45
+    (1 row)
+
+-- Jurassic + Cretaceous
+    dinosaurs=# SELECT * FROM dinos WHERE period = 'Jurassic' OR period='Cretaceous' ORDER BY species ASC;
+
+--
